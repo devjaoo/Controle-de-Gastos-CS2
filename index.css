@@ -1,0 +1,209 @@
+/* Estilos para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/cs2T.jfif); /* Imagem de fundo */
+    background-size: cover; /* A imagem ocupa toda a tela, mantendo a proporção */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* A imagem fica fixa ao rolar a página */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: #fff; /* Cor do texto */
+    height: 100vh; /* Altura da tela para ocupar a tela inteira */
+    display: flex;
+    flex-direction: column; /* Organiza as seções verticalmente */
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Necessário para posicionar o saldo total no canto superior direito */
+}
+
+/* Estilos para o título */
+h1 {
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilos para o saldo total */
+.total {
+    font-weight: bold;
+    font-size: 22px;
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(224, 204, 204, 0.7); /* Fundo semi-transparente para destaque */
+    border-radius: 10px;
+    position: absolute; /* Fixa o saldo total na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    width: auto;
+}
+
+/* Estilos para o formulário */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px; /* Tamanho máximo para o formulário */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 120px; /* Garante que o formulário não sobreponha o saldo */
+}
+
+/* Estilos para inputs e selects */
+input, select {
+    padding: 14px;
+    margin: 10px 0;
+    width: calc(100% - 28px); /* Preenche todo o campo, considerando o padding */
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s ease-in-out; /* Suaviza a transição do foco */
+}
+
+/* Efeito de foco nos campos */
+input:focus, select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.7); /* Efeito de foco mais destacado */
+}
+
+/* Estilos para o botão */
+button {
+    padding: 14px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover no botão */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    border-radius: 8px;
+    max-width: 800px; /* Limita o tamanho máximo da tabela */
+    overflow-x: auto; /* Permite rolar horizontalmente em telas menores */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px 12px; /* Diminuímos o padding para otimizar o espaço */
+    text-align: center;
+    font-size: 14px; /* Diminui o tamanho da fonte para otimizar o uso do espaço */
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #444;
+    color: #fff;
+}
+
+td.positivo {
+    color: #4CAF50;
+}
+
+td.negativo {
+    color: #f44336;
+}
+
+/* Estilo do botão de remover */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    background-color: #f44336; /* Cor de fundo do botão de remover */
+    margin-left: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-container button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para o botão de exportar para CSV */
+button.export-csv {
+    padding: 14px 30px; /* Adiciona mais espaço para o botão */
+    background: linear-gradient(45deg, #4CAF50, #81C784); /* Gradiente de cor verde */
+    color: #fff; /* Cor do texto */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Suaviza todas as transições (cor, borda, sombra) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave para o botão */
+    margin-top: 20px; /* Espaço superior */
+}
+
+button.export-csv:hover {
+    background: linear-gradient(45deg, #66bb6a, #4CAF50); /* Efeito de hover com gradiente mais escuro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+button.export-csv:active {
+    transform: translateY(2px); /* Efeito de "pressionamento" do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Volta a sombra ao pressionar */
+}
+
+button.export-csv:focus {
+    outline: none; /* Remove o contorno padrão ao focar no botão */
+    border: 2px solid #66bb6a; /* Adiciona uma borda verde clara ao focar */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.7); /* Adiciona uma sombra de foco */
+}
+
+/* Adicionando um ícone de download no botão (opcional) */
+button.export-csv::before {
+    content: '\f019'; /* Código para o ícone de download do Font Awesome */
+    font-family: 'Font Awesome 5 Free'; /* Se você estiver usando FontAwesome */
+    font-weight: 900; /* Peso do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        width: 80%; /* Ajusta a largura do formulário em telas menores */
+    }
+
+    table {
+        font-size: 12px; /* Diminui ainda mais o tamanho da fonte da tabela em telas pequenas */
+    }
+
+    .total {
+        font-size: 16px; /* Ajusta o tamanho da fonte do saldo total */
+    }
+}

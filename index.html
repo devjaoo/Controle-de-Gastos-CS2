@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Apostas</title>
+    <!-- Link para o FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="img/cifrao-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css"> <!-- Arquivo CSS -->
+    <script src="index.js" defer></script> <!-- Arquivo JavaScript -->
+</head>
+
+<body>
+
+    <h1>Controle de Apostas</h1>
+
+    <div class="form-container">
+        <label for="data">Data: </label>
+        <input type="date" id="data" required>
+
+        <label for="entrada">Entrada (R$): </label>
+        <input type="number" id="entrada" min="0" required>
+
+        <label for="saida">Saída (R$): </label>
+        <input type="number" id="saida" min="0" required>
+
+        <button onclick="adicionarAposta()">Registrar Aposta</button>
+    </div>
+
+    <table id="tabela-apostas">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Entrada (R$)</th>
+                <th>Saída (R$)</th>
+                <th>Resultado</th>
+                <th>Lucro/Prejuízo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As apostas registradas serão exibidas aqui -->
+        </tbody>
+    </table>
+
+    <div class="total">
+        <p>Saldo Total: R$ <span id="saldo-total">0.00</span></p>
+    </div>
+
+    <div>
+        <button class="export-csv" onclick="exportarCSV()">Exportar para CSV</button>
+
+    </div>
+
+</body>
+
+</html>
